@@ -11,14 +11,18 @@
     .level-4 {
         padding-left: 105px;
     }
+    .symbol {
+        padding-right: 10px;
+    }
 </style>
 <script type="text/ng-template" id="items_renderer">
-    <a class="item level-{{item.depth}}" ng-click="collapse(item)" ng-show="item.visible">
-        <span style="padding-right: 10px;">
-            <i class="icon ion-arrow-down-b" ng-if="item.tree"></i>
+    <a class="item level-{{item.depth}}" ng-click="collapse(item)" ng-hide="item.collapsed">
+        <span class="symbol">
+            <i class="icon ion-arrow-down-b" ng-if="item.tree && !item.tree.collapsed"></i>
+            <i class="icon ion-arrow-right-b" ng-if="item.tree && item.tree.collapsed"></i>
             <input type="checkbox" ng-if="!item.tree"/>
         </span>
-        ({{item.depth}}) {{item.name}}
+        {{item.name}}
     </a>
     <ion-list ng-model="item.tree" ng-repeat="item in item.tree" ng-include="'items_renderer'"></ion-list>
 </script>

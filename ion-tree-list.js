@@ -9,7 +9,7 @@ function addDepthToTree(obj, depth) {
     for (key in obj) {
         if (typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
-            addDepthToTree(obj[key], key === 'tree' ? depth + 1 : depth)
+            addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth)
         }
     }
     return obj
@@ -29,6 +29,7 @@ function collapse(obj) {
         }
     }
 
+    console.log('collapse:', obj);
     return obj
 }
 

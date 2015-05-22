@@ -16,15 +16,19 @@
     }
 </style>
 <script type="text/ng-template" id="items_renderer">
-    <a class="item level-{{item.depth}}" ng-click="collapse(item)" ng-hide="item.collapsed">
+    <a class="item level-{{item.depth}}">
         <span class="symbol">
-            <i class="icon ion-arrow-down-b" ng-if="item.tree && !item.tree.collapsed"></i>
-            <i class="icon ion-arrow-right-b" ng-if="item.tree && item.tree.collapsed"></i>
-            <input type="checkbox" ng-if="!item.tree"/>
+            <i ng-click="collapse(item)" class="icon ion-arrow-down-b" ng-if="item.tree && !item.tree.collapsed"></i>
+            <i ng-click="collapse(item)" class="icon ion-arrow-right-b" ng-if="item.tree && item.tree.collapsed"></i>
+            <input type="checkbox" checked ng-if="!item.tree"/>
         </span>
         {{item.name}}
     </a>
-    <ion-list ng-model="item.tree" ng-repeat="item in item.tree" ng-include="'items_renderer'"></ion-list>
+    <ion-list ng-model="item.tree"
+              ng-repeat="item in item.tree"
+              ng-hide="item.collapsed"
+              ng-include="'items_renderer'">
+    </ion-list>
 </script>
 
 <div class="list" ng-model="items" show-reorder="true">

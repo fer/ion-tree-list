@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  * returns a tree object with extra attribute 'depth'
  *
@@ -6,9 +8,10 @@
  * @returns {*} obj with depths
  */
 function addDepthToTree(obj, depth) {
-    for (key in obj) {
+    for (var key in obj) {
         if (typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
+            obj[key].collapsed = false;
             addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth)
         }
     }
@@ -22,7 +25,7 @@ function addDepthToTree(obj, depth) {
  * @returns {*}
  */
 function collapse(obj) {
-    for (key in obj) {
+    for (var key in obj) {
         if (typeof(obj[key]) == 'object') {
             obj[key].collapsed = !obj[key].collapsed;
             collapse(obj[key])

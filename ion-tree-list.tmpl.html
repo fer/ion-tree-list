@@ -1,36 +1,16 @@
-<style>
-    .level-1 {
-        padding-left: 45px;
-    }
-    .level-2 {
-        padding-left: 65px;
-    }
-    .level-3 {
-        padding-left: 85px;
-    }
-    .level-4 {
-        padding-left: 105px;
-    }
-    .symbol {
-        padding-right: 10px;
-    }
-</style>
+<link type="text/css" rel="stylesheet" href="/lib/ion-tree-list/ion-tree-list.css"/>
+
 <script type="text/ng-template" id="items_renderer">
-    <a class="item level-{{item.depth}}">
-        <span class="symbol">
-            <i ng-click="collapse(item)" class="icon ion-arrow-down-b" ng-if="item.tree && !item.tree.collapsed"></i>
-            <i ng-click="collapse(item)" class="icon ion-arrow-right-b" ng-if="item.tree && item.tree.collapsed"></i>
-            <input type="checkbox" checked ng-if="!item.tree"/>
+    <ion-item class="item depth-{{item.depth}}" ng-click="collapse(item)" >
+        <span class="symbol" ng-if="item.tree">
+            <i ng-class="item.tree.collapsed ? 'icon ion-arrow-right-b' : 'icon ion-arrow-down-b'" style="padding-right: 5px;"></i>
         </span>
         {{item.name}}
-    </a>
-    <ion-list ng-model="item.tree"
-              ng-repeat="item in item.tree"
-              ng-hide="item.collapsed"
-              ng-include="'items_renderer'">
+    </ion-item>
+    <ion-list ng-model="item.tree" ng-repeat="item in item.tree" ng-hide="item.collapsed" ng-include="'items_renderer'">
     </ion-list>
 </script>
 
-<div class="list" ng-model="items" show-reorder="true">
+<div class="list" ng-model="items">
     <span ng-repeat="item in items" ng-include="'items_renderer'"></span>
 </div>

@@ -5,7 +5,7 @@
  *
  * @param obj tree object
  * @param depth initial depth
- * @returns {*} obj with depths
+ * @returns {*} obj
  */
 function addDepthToTree(obj, depth) {
     for (var key in obj) {
@@ -31,8 +31,6 @@ function collapse(obj) {
             collapse(obj[key])
         }
     }
-
-    console.log('collapse:', obj);
     return obj
 }
 
@@ -46,9 +44,8 @@ angular.module('ion-tree-list', [])
         },
         templateUrl: 'lib/ion-tree-list/ion-tree-list.tmpl.html',
         controller: function($scope){
-            // Add depth attr to items
-            $scope.items = addDepthToTree($scope.items, 0);
-            $scope.collapse = collapse
+            $scope.items = addDepthToTree($scope.items, 1);
+            $scope.collapse = collapse;
         }
     }
 });

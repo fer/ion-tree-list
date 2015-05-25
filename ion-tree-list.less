@@ -1,0 +1,8 @@
+.mixin-loop(@start, @end, @init, @offset) when (@end >= @start) {
+  .depth-@{start} {
+    padding-left: @init * 1px
+   }
+  .mixin-loop(@start + 1, @end, @init + @offset, @offset);
+}
+
+.mixin-loop(1, 35, 15, 20);

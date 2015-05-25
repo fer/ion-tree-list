@@ -1,5 +1,4 @@
-# Files
+*.css
+*.css.map
 .DS_Store
-
-# Directories
 .idea

@@ -1,9 +1,9 @@
-<link type="text/css" rel="stylesheet" href="/lib/ion-tree-list/ion-tree-list.css"/>
+<link type="text/css" rel="stylesheet" href="{{baseUrl}}/ion-tree-list.css"/>
 
 <script type="text/ng-template" id="items_renderer">
-    <ion-item class="item depth-{{item.depth}}" ng-click="collapse(item)" >
-        <span class="symbol" ng-if="item.tree">
-            <i ng-class="item.tree.collapsed ? 'icon ion-arrow-right-b' : 'icon ion-arrow-down-b'" style="padding-right: 5px;"></i>
+    <ion-item class="item depth-{{item.depth}}" ng-click="toggleCollapse(item)" >
+        <span class="symbol" ng-if="item.tree.length > 0">
+            <i ng-class="item.tree.collapsed ? 'icon ion-arrow-right-b' : 'icon ion-arrow-down-b'"></i>
         </span>
         {{item.name}}
     </ion-item>

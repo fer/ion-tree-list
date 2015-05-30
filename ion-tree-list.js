@@ -1,51 +1,46 @@
 "use strict";
 
-/**
- * returns a tree object with extra attribute 'depth'
- *
- * @param obj tree object
- * @param depth initial depth
- * @returns {*} obj
- */
-function addDepthToTree(obj, depth) {
+var CONF = {
+    baseUrl: 'lib/ion-tree-list',
+    digestTtl: 35
+};
+
+function addDepthToTree(obj, depth, collapsed) {
     for (var key in obj) {
         if (typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
-            obj[key].collapsed = false;
-            addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth)
+            obj[key].collapsed = collapsed;
+            addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth, collapsed)
         }
     }
     return obj
 }
 
-/**
- * adds visible attribute and toggles its value in case it exists
- *
- * @param obj
- * @returns {*}
- */
-function collapse(obj) {
+function toggleCollapse(obj) {
     for (var key in obj) {
         if (typeof(obj[key]) == 'object') {
             obj[key].collapsed = !obj[key].collapsed;
-            collapse(obj[key])
+            toggleCollapse(obj[key])
         }
     }
     return obj
 }
 
-angular.module('ion-tree-list', [])
+angular.module('ion-tree-list', [], function($rootScopeProvider){
+    $rootScopeProvider.digestTtl(CONF.digestTtl)
+})
 .directive('ionTreeList', function () {
     return {
         restrict: 'E',
-        transclude: true,
         scope: {
-            items: '='
+            items: '=',
+            collapsed: '='
         },
-        templateUrl: 'lib/ion-tree-list/ion-tree-list.tmpl.html',
+        templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope){
-            $scope.items = addDepthToTree($scope.items, 1);
-            $scope.collapse = collapse;
+            $scope.baseUrl = CONF.baseUrl;
+            $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
+            $scope.toggleCollapse = toggleCollapse
         }
     }
 });

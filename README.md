@@ -1,19 +1,14 @@
 # ion-tree-list
 
-Ionic directive for displaying and manipulating nested list ionic items.
-
-<!-- Here is the DEMO page -->
+Ionic directive for displaying nested list ionic items.
 
 ## Installation
-
-<!-- bower installation -->
-
 
 ```
 <script src="lib/ion-tree-list/ion-tree-list.js"></script>
 ```
 
-app.js: 
+app: 
 
 ```
 angular.module('starter', [
@@ -43,8 +38,8 @@ controller:
 ```
 
 
-Template:
+view:
 
 ```
-<ion-tree-list items="tasks"></ion-tree-list>
+<ion-tree-list items="tasks" collapsed="true"></ion-tree-list>
 ```

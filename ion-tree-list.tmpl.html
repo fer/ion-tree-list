@@ -3,7 +3,7 @@
 <script type="text/ng-template" id="items_renderer">
     <ion-item class="item depth-{{item.depth}}" ng-click="toggleCollapse(item)" >
         <span class="symbol" ng-if="item.tree.length > 0">
-            <i ng-class="item.tree.collapsed ? 'icon ion-arrow-right-b' : 'icon ion-arrow-down-b'"></i>
+            <i class="icon" ng-class="item.tree.collapsed ? 'ion-arrow-right-b' : 'ion-arrow-down-b'"></i>
         </span>
         {{item.name}}
     </ion-item>

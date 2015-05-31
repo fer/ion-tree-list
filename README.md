@@ -6,10 +6,16 @@ Ionic directive for displaying nested list ionic items.
 ## Installation
 
 ```
+bower install ion-tree-list --save
+```
+
+Add somewhere in your HEAD tag:
+
+```
 <script src="lib/ion-tree-list/ion-tree-list.js"></script>
 ```
 
-app: 
+You'll need to add ```ion-tree-list``` as a dependency on your Ionic app:
 
 ```
 angular.module('starter', [
@@ -20,7 +26,7 @@ angular.module('starter', [
 ])
 ```
 
-controller:
+In your ```controller.js```:
 
 ```
   $scope.tasks = [
@@ -39,7 +45,7 @@ controller:
 ```
 
 
-view:
+In your ```view.js```:
 
 ```
 <ion-tree-list items="tasks" collapsed="true"></ion-tree-list>

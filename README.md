@@ -2,7 +2,7 @@
 
 Ionic directive for displaying nested list ionic items.
 
-Check [demo](http://fer.github.io/ion-tree-list/#/tab/dash) link.
+Check [demo](http://fer.github.io/ion-tree-list/) link.
 
 ## Installation
 

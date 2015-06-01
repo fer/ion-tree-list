@@ -5,6 +5,6 @@
     "ionic": "driftyco/ionic-bower#1.0.0"
   },
   "dependencies": {
-    "ion-tree-list": "~0.0.1"
+    "ion-tree-list": "~0.0.2"
   }
 }

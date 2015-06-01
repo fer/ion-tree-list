@@ -1,4 +1,4 @@
-angular.module('starter', ['ionic', 'starter.controllers', 'ion-tree-list'])
+angular.module('starter', ['ionic', 'ion-tree-list'])
 
 .run(function($ionicPlatform) {})
 
@@ -23,4 +23,24 @@ angular.module('starter', ['ionic', 'starter.controllers', 'ion-tree-list'])
 
   $urlRouterProvider.otherwise('/tab/dash');
 
+})
+.controller('DashCtrl', function($scope) {
+  $scope.tasks = [
+    {
+      name: 'first task 1',
+      tree: [
+        {
+          name: 'first task 1.1',
+          tree: [
+            {
+              name: 'first task 1.1.1'
+            }
+          ]
+        }
+      ]
+    },
+    {
+      name: 'first task 2'
+    }
+  ]
 });

@@ -1,0 +1,24 @@
+{
+  "name": "ion-tree-list",
+  "main": "ion-tree-list.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/fer/ion-tree-list",
+  "authors": [
+    "fer <fer@ferqwerty.com>"
+  ],
+  "description": "Ionic directive for displaying nested list items.",
+  "keywords": [
+    "ionic",
+    "ion",
+    "tree",
+    "list"
+  ],
+  "license": "MIT",
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "ion-tree-list.less",
+    "LICENSE",
+    "README.md"
+  ]
+}

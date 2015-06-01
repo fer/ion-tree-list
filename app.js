@@ -4,26 +4,32 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
 
         $scope.tasks = [
             {
-                name: 'first task 1',
+                name: 'Chapter one',
                 tree: [
                     {
-                        name: 'first task 1.1',
+                        name: 'Section 1',
                         tree: [
                             {
-                                name: 'first task 1.1.1'
+                                name: 'Subsection'
                             }
                         ]
+                    },
+                    {
+                        name: 'Section 2'
+                    },
+                    {
+                        name: 'Section 3'
                     }
                 ]
             },
             {
-                name: 'first task 2'
+                name: 'Chapter two'
             },
             {
-                name: 'first task 3'
+                name: 'Chapter three'
             },
             {
-                name: 'first task 4'
+                name: 'Chapter four'
             }
         ];
 

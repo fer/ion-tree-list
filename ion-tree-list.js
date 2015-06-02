@@ -39,12 +39,15 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope){
             $scope.baseUrl = CONF.baseUrl;
-            $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
             $scope.toggleCollapse = toggleCollapse;
 
             $scope.$watch('collapsed', function(){
                 $scope.toggleCollapse($scope.items);
-            })
+            });
+
+            $scope.$watch('items', function(){
+                $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
+            });
         }
     }
 });

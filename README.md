@@ -46,7 +46,7 @@ In your ```controller.js```:
 ```
 
 
-In your ```view.js```:
+In your ```view.html```:
 
 ```
 <ion-tree-list items="tasks" collapsed="true"></ion-tree-list>

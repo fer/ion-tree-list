@@ -86,5 +86,5 @@ your www folder containing the following:
 Add an extra ```template-url``` attribute for your custom template:
  
 ```
-<ion-tree-list items="tasks" collapsed="false" template-url="'ion-item.tmpl.html'"></ion-tree-list>
+<ion-tree-list items="tasks" template-url="'ion-item.tmpl.html'"></ion-tree-list>
 ```

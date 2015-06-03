@@ -1,13 +1,21 @@
 <link type="text/css" rel="stylesheet" href="{{baseUrl}}/ion-tree-list.css"/>
 
+<script type="text/ng-template" id="item_default_renderer">
+    <span class="symbol">
+        <i class="icon" ng-if="item.tree.length > 0" ng-class="item.tree.collapsed ? 'ion-arrow-right-b' : 'ion-arrow-down-b'"></i>
+    </span>
+    {{item.name}}
+</script>
+
 <script type="text/ng-template" id="items_renderer">
-    <ion-item class="item depth-{{item.depth}}" ng-click="toggleCollapse(item)" >
-        <span class="symbol" ng-if="item.tree.length > 0">
-            <i class="icon" ng-class="item.tree.collapsed ? 'ion-arrow-right-b' : 'ion-arrow-down-b'"></i>
-        </span>
-        {{item.name}}
+    <ion-item class="item depth-{{item.depth}}"
+              ng-click="toggleCollapse(item)"
+              ng-include="templateUrl">
     </ion-item>
-    <ion-list ng-model="item.tree" ng-repeat="item in item.tree" ng-hide="item.collapsed" ng-include="'items_renderer'">
+    <ion-list ng-model="item.tree"
+              ng-repeat="item in item.tree"
+              ng-hide="item.collapsed"
+              ng-include="'items_renderer'">
     </ion-list>
 </script>
 

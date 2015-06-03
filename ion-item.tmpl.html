@@ -1,0 +1,5 @@
+<span class="symbol">
+    <i class="icon" ng-if="item.tree.length > 0" ng-class="item.tree.collapsed ? 'ion-arrow-right-b' : 'ion-arrow-down-b'"></i>
+    <input type="checkbox" ng-hide="item.tree.length > 0" ng-model="item.checked"/>
+</span>
+{{item.name}}

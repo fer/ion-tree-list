@@ -34,7 +34,8 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         restrict: 'E',
         scope: {
             items: '=',
-            collapsed: '='
+            collapsed: '=',
+            templateUrl: '@'
         },
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope){
@@ -48,6 +49,8 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             $scope.$watch('items', function(){
                 $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
             });
+
+            $scope.templateUrl = $scope.templateUrl ? $scope.templateUrl : 'item_default_renderer';
         }
     }
 });

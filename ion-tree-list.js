@@ -35,12 +35,18 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         scope: {
             items: '=',
             collapsed: '=',
-            templateUrl: '@'
+            templateUrl: '@',
+            showReorder: '='
         },
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope){
             $scope.baseUrl = CONF.baseUrl;
             $scope.toggleCollapse = toggleCollapse;
+
+            $scope.moveItem = function(item, fromIndex, toIndex) {
+                $scope.items.splice(fromIndex, 1);
+                $scope.items.splice(toIndex, 0, item);
+            };
 
             $scope.$watch('collapsed', function(){
                 $scope.toggleCollapse($scope.items);

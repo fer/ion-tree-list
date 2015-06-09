@@ -1,5 +1,5 @@
-[![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list)
-# ion-tree-list
+
+# ion-tree-list [![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list)
 
 Ionic directive for displaying nested list ionic items.
 

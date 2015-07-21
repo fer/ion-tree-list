@@ -84,7 +84,6 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
                 name: 'Chapter fourteen',
                 checked: true
             },
-            ,
             {
                 name: 'Chapter fifteen',
                 checked: true

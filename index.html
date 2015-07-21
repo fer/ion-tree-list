@@ -10,20 +10,19 @@
     <link rel="stylesheet" href="lib/ionic/css/ionic.min.css"/>
   </head>
   <body ng-app="starter" ng-controller="DashCtrl">
-    <div class="bar bar-positive">
+    <ion-header-bar class="bar-positive">
       <button class="button" ng-click="collapse=!collapse">Collapse</button>
       <h1 class="title">ion-tree-list</h1>
-
       <a class="button" ng-click="toggleTemplate()" target="_blank">
         Custom template
       </a>
       <a class="button" href="https://github.com/fer/ion-tree-list" target="_blank">
         <i class="icon ion-social-octocat"></i>
       </a>
-    </div>
-    <div class="content" style="padding-top: 43px;">
+    </ion-header-bar>
+    <ion-content>
       <ion-tree-list items="tasks" collapsed="collapse" template-url="{{customTemplate}}"></ion-tree-list>
-    </div>
+    </<ion-content>>
   
   </body>
 </html>

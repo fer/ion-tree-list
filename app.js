@@ -11,7 +11,13 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
                         checked: false,
                         tree: [
                             {
-                                name: 'Subsection'
+                                name: 'Subsection 1.1'
+                            },
+                            {
+                                name: 'Subsection 1.2'
+                            },
+                            {
+                                name: 'Subsection 1.3'
                             }
                         ]
                     },
@@ -36,6 +42,51 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
             },
             {
                 name: 'Chapter four',
+                checked: true
+            },
+            {
+                name: 'Chapter five',
+                checked: true
+            },
+            {
+                name: 'Chapter six',
+                checked: true
+            },
+            {
+                name: 'Chapter seven',
+                checked: true
+            },
+            {
+                name: 'Chapter eight',
+                checked: true
+            },
+            {
+                name: 'Chapter nine',
+                checked: true
+            },
+            {
+                name: 'Chapter ten',
+                checked: true
+            },
+            {
+                name: 'Chapter eleven',
+                checked: true
+            },
+            {
+                name: 'Chapter twelve',
+                checked: true
+            },
+            {
+                name: 'Chapter thirteen',
+                checked: true
+            },
+            {
+                name: 'Chapter fourteen',
+                checked: true
+            },
+            ,
+            {
+                name: 'Chapter fifteen',
                 checked: true
             }
         ];

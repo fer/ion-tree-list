@@ -37,7 +37,7 @@ In your ```controller.js```:
       tree: [
         {
           name: 'first task 1.1'
-        },
+        }
       ]
     },
     {

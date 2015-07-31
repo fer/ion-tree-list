@@ -92,3 +92,7 @@ Add an extra ```template-url``` attribute for your custom template:
 # Contribute
 
 [![Stories in Ready](https://badge.waffle.io/fer/ion-tree-list.png?label=ready&title=Ready)](https://waffle.io/fer/ion-tree-list)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fer/ion-tree-list/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+

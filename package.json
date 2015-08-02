@@ -1,0 +1,37 @@
+{
+  "name": "ion-tree-list",
+  "version": "0.0.3",
+  "description": "Ionic directive for displaying nested list items.",
+  "main": "ion-tree-list.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fer/ion-tree-list.git"
+  },
+  "keywords": [
+    "ionic",
+    "ion",
+    "tree",
+    "list"
+  ],
+  "author": "fer <fer@ferqwerty.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fer/ion-tree-list/issues"
+  },
+  "homepage": "https://github.com/fer/ion-tree-list#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.3",
+    "karma-jasmine": "^0.3.6",
+    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-phantomjs-launcher": "^0.2.0"
+  },
+  "dependencies": {
+    "karma-html2js-preprocessor": "^0.1.0",
+    "phantomjs": "^1.9.17"
+  }
+}

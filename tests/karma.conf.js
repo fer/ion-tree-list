@@ -14,11 +14,6 @@ module.exports = function(config) {
             '**/*.tmpl.html': ['ng-html2js']
         },
         browsers: ['PhantomJS'],
-        singleRun: false,
-        continuous: {
-            configFile: 'tests/karma.conf.js',
-            singleRun: true,
-            browsers: ['PhantomJS']
-        }
+        singleRun: false
     })
 };

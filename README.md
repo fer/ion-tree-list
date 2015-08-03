@@ -1,5 +1,4 @@
-
-# ion-tree-list [![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list)
+# ion-tree-list [![Stories in Ready](https://badge.waffle.io/fer/ion-tree-list.png?label=ready&title=Ready)](https://waffle.io/fer/ion-tree-list)  [![devDependency Status](https://david-dm.org/fer/ion-tree-list/dev-status.svg?style=flat)](https://david-dm.org/fer/ion-tree-list#info=devDependencies) [![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list) [![Build Status](https://drone.io/github.com/fer/ion-tree-list/status.png)](https://drone.io/github.com/fer/ion-tree-list/latest)
 
 Ionic directive for displaying nested list ionic items.
 
@@ -89,10 +88,5 @@ Add an extra ```template-url``` attribute for your custom template:
 ```
 <ion-tree-list items="tasks" template-url="'ion-item.tmpl.html'"></ion-tree-list>
 ```
-# Contribute
-
-[![Stories in Ready](https://badge.waffle.io/fer/ion-tree-list.png?label=ready&title=Ready)](https://waffle.io/fer/ion-tree-list)
-
 
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fer/ion-tree-list/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

@@ -26,12 +26,10 @@
     "gulp": "^3.9.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.3",
+    "karma-html2js-preprocessor": "^0.1.0",
     "karma-jasmine": "^0.3.6",
     "karma-ng-html2js-preprocessor": "^0.1.2",
-    "karma-phantomjs-launcher": "^0.2.0"
-  },
-  "dependencies": {
-    "karma-html2js-preprocessor": "^0.1.0",
+    "karma-phantomjs-launcher": "^0.2.0",
     "phantomjs": "^1.9.17"
   }
 }

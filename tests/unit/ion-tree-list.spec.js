@@ -46,44 +46,37 @@ describe('Directives', function(){
             d = new Directive('ionTreeList')
         });
 
-        it('has the ion tree list directive', function(done){
-            expect(d.directive).toBeDefined();
-            done()
+        it('has the ion tree list directive', function(){
+            expect(d.directive).toBeDefined()
         });
 
-        it('logs a template for cart-item.html', function(done){
-            expect(templateCache.get('ion-tree-list.tmpl.html')).toBeDefined();
-            done()
+        it('logs a template for cart-item.html', function(){
+            expect(templateCache.get('ion-tree-list.tmpl.html')).toBeDefined()
         });
 
-        it('has an isolate scope', function(done) {
-            expect(d.isolateScope).toBeDefined();
-            done()
+        it('has an isolate scope', function() {
+            expect(d.isolateScope).toBeDefined()
         });
 
-        it('has an isolate scope with a "items" property on it', function(done) {
-            expect(d.isolateScope.items).toBeDefined();
-            done()
+        it('has an isolate scope with a "items" property on it', function() {
+            expect(d.isolateScope.items).toBeDefined()
         });
 
-        it('has an moveItem method', function(done){
-            expect(typeof d.isolateScope.moveItem).toBe('function');
-            done();
+        it('has an moveItem method', function(){
+            expect(typeof d.isolateScope.moveItem).toBe('function')
         });
 
-        it('items have the same of elements as in scope', function(done){
+        it('items have the same of elements as in scope', function(){
             expect(d.element[0].querySelectorAll('.item').length).toBe(4);
-            done()
         });
 
-        it('items has the correct className assigned', function(done){
+        it('items has the correct className assigned', function(){
             var list = d.element[0].children[3].children[0],
                 classNameFirst = list.children[0].className,
                 classNameFirstNested = list.children[1].children[0].className;
 
             expect(classNameFirst).toBe('item depth-1');
             expect(classNameFirstNested).toBe('item depth-2');
-            done()
         })
     })
 });

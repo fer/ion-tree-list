@@ -14,6 +14,6 @@ module.exports = function(config) {
             '**/*.tmpl.html': ['ng-html2js']
         },
         browsers: ['PhantomJS'],
-        singleRun: true
+        singleRun: false
     })
 };

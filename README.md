@@ -89,4 +89,10 @@ Add an extra ```template-url``` attribute for your custom template:
 <ion-tree-list items="tasks" template-url="'ion-item.tmpl.html'"></ion-tree-list>
 ```
 
+## Contributing
+
+Developers interested in contributing are very welcomed. 
+
+There's an existent list of issues right [here](https://github.com/fer/ion-tree-list/issues).
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/fer/ion-tree-list/trend.png)](https://bitdeli.com/free "Bitdeli Badge")

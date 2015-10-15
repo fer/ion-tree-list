@@ -25,6 +25,7 @@
   "homepage": "https://github.com/fer/ion-tree-list#readme",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-david": "^0.2.3",
     "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.0",
@@ -32,7 +33,7 @@
     "karma": "^0.13.3",
     "karma-html2js-preprocessor": "^0.1.0",
     "karma-jasmine": "^0.3.6",
-    "karma-ng-html2js-preprocessor": "^0.1.2",
+    "karma-ng-html2js-preprocessor": "^0.2.0",
     "karma-phantomjs-launcher": "^0.2.0",
     "phantomjs": "^1.9.17"
   }

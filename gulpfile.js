@@ -18,6 +18,12 @@ gulp.task('less', function () {
         .pipe(gulp.dest('.'));
 });
 
+gulp.task('updateNpmDependencies', function(){
+    return gulp.src('package.json')
+        .pipe($.david({ update: true }))
+        .pipe(gulp.dest('.'))
+});
+
 gulp.task('watch', function(){
     gulp.watch('./*.less', ['less']);
 });

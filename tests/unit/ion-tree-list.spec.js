@@ -62,7 +62,7 @@ describe('Directives', function(){
             expect(d.isolateScope.items).toBeDefined()
         });
 
-        it('has an moveItem method', function(){
+        it('has a moveItem method', function(){
             expect(typeof d.isolateScope.moveItem).toBe('function')
         });
 

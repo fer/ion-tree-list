@@ -7,7 +7,7 @@ var CONF = {
 
 function addDepthToTree(obj, depth, collapsed) {
     for (var key in obj) {
-        if (typeof(obj[key]) == 'object') {
+        if ( obj[key] && typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
             obj[key].collapsed = collapsed;
             addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth, collapsed)
@@ -18,7 +18,7 @@ function addDepthToTree(obj, depth, collapsed) {
 
 function toggleCollapse(obj) {
     for (var key in obj) {
-        if (typeof(obj[key]) == 'object') {
+        if ( obj[key] && typeof(obj[key]) == 'object') {
             obj[key].collapsed = !obj[key].collapsed;
             toggleCollapse(obj[key])
         }

@@ -18,7 +18,7 @@
     ".bowerrc",
     ".gitignore",
     "bower.json",
-    "gulfile.js",
+    "gulpfile.js",
     "ion-tree-list.less",
     "LICENSE",
     "package.json",

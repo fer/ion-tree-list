@@ -1,7 +1,7 @@
 {
   "name": "ion-tree-list",
   "main": "ion-tree-list.js",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "homepage": "https://github.com/fer/ion-tree-list",
   "authors": [
     "fer <fer@ferqwerty.com>"
@@ -15,19 +15,27 @@
   ],
   "license": "MIT",
   "ignore": [
+    ".bowerrc",
     ".gitignore",
     "bower.json",
+    "gulpfile.js",
     "ion-tree-list.less",
     "LICENSE",
-    "README.md"
+    "package.json",
+    "README.md",
+    "tests"
   ],
-  "_release": "0.0.3",
+  "devDependencies": {
+    "ionic": "~1.0.1",
+    "angular-mocks": "1.3.13"
+  },
+  "_release": "0.0.6",
   "_resolution": {
     "type": "version",
-    "tag": "0.0.3",
-    "commit": "57a23916b2d04847295ccb467075423dade000ea"
+    "tag": "0.0.6",
+    "commit": "e75850c60ca3caecf0a6b72f08f2fb8850b9285d"
   },
   "_source": "git://github.com/fer/ion-tree-list.git",
-  "_target": "~0.0.3",
+  "_target": "~0.0.6",
   "_originalSource": "ion-tree-list"
 }

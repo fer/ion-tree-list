@@ -15,10 +15,18 @@
   ],
   "license": "MIT",
   "ignore": [
+    ".bowerrc",
     ".gitignore",
     "bower.json",
+    "gulpfile.js",
     "ion-tree-list.less",
     "LICENSE",
-    "README.md"
-  ]
+    "package.json",
+    "README.md",
+    "tests"
+  ],
+  "devDependencies": {
+    "ionic": "~1.0.1",
+    "angular-mocks": "1.3.13"
+  }
 }

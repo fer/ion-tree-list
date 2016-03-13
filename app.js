@@ -1,5 +1,5 @@
-angular.module('starter', ['ionic', 'ion-tree-list'])
-    .controller('DashCtrl', function($scope) {
+angular.module('starter', ['ionic', 'ionic-toast', 'ion-tree-list'])
+    .controller('DashCtrl', function($scope, ionicToast) {
         $scope.collapse = true;
         $scope.tasks = [
             {
@@ -90,6 +90,10 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
             }
         ];
 
+        $scope.$on('$ionTreeList:ItemClicked', function(event, item) {
+            ionicToast.show('You clicked: ' + JSON.stringify(item.name), 'bottom', true, 2500)
+        });
+
         $scope.toggleCollapse = function(){
             $scope.collapse = !$scope.collapse;
             console.log($scope.collapse)
@@ -98,10 +102,6 @@ angular.module('starter', ['ionic', 'ion-tree-list'])
         $scope.customTemplate = 'item_default_renderer';
 
         $scope.toggleTemplate = function() {
-            if ($scope.customTemplate == 'ion-item.tmpl.html') {
-                $scope.customTemplate = 'item_default_renderer'
-            } else {
-                $scope.customTemplate = 'ion-item.tmpl.html'
-            }
+            $scope.customTemplate = $scope.customTemplate == 'ion-item.tmpl.html' ? 'item_default_renderer' : 'ion-item.tmpl.html'
         }
     });

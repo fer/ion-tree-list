@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.0.0"
   },
   "dependencies": {
-    "ion-tree-list": "~0.0.6"
+    "ion-tree-list": "~0.0.7",
+    "ionic-toast": "^0.2.0"
   }
 }

@@ -43,6 +43,7 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         controller: function($scope){
             $scope.baseUrl = CONF.baseUrl;
             $scope.toggleCollapse = toggleCollapse;
+            $scope.templateUrl = $scope.templateUrl ? $scope.templateUrl : 'item_default_renderer';
             
             $scope.emitEvent = function(item){
                 $scope.$emit('$ionTreeList:ItemClicked', item)
@@ -59,9 +60,8 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
 
             $scope.$watch('items', function(){
                 $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
-            });
-
-            $scope.templateUrl = $scope.templateUrl ? $scope.templateUrl : 'item_default_renderer';
+                $scope.$emit('$ionTreeList:LoadComplete', $scope.items);
+            })
         }
     }
 });

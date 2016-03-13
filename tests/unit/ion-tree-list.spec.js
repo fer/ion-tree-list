@@ -85,13 +85,26 @@ describe('Directives', function(){
             expect(typeof d.isolateScope.emitEvent).toBe('function')
         });
         
-        it('has an emitEvent on item click called $ionTreeList:ItemClicked', function(){
-            var item0 = d.isolateScope.items[0];
-            
+        it('has an emitEvent on item click called $ionTreeList:ItemClicked', function($timeout){
             spyOn(d.isolateScope, '$emit');
-            d.isolateScope.emitEvent(item0);
-            expect(d.isolateScope.$emit).toHaveBeenCalled();
-            expect(d.isolateScope.$emit).toHaveBeenCalledWith('$ionTreeList:ItemClicked', item0)
+            
+            var items = d.element.find('ion-item'), item0 = items[0];
+            item0.click();
+            d.isolateScope.$digest();
+            $timeout(function(){
+                expect(d.isolateScope.$emit).toHaveBeenCalled();
+                expect(d.isolateScope.$emit).toHaveBeenCalledWith('$ionTreeList:ItemClicked', item0)
+            }, 0)
+        })
+        
+        it('has an emitEvent on list loaded called $ionTreeList:LoadComplete', function($timeout){
+            spyOn(d.isolateScope, '$emit');
+            d.isolateScope.items.pop();
+            d.isolateScope.$digest();
+            $timeout(function(){
+                expect(d.isolateScope.$emit).toHaveBeenCalled();    
+                expect(d.isolateScope.$emit).toHaveBeenCalledWith('$ionTreeList:LoadComplete')
+            }, 0)
         })
     })
 });

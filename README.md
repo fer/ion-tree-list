@@ -54,10 +54,17 @@ In your ```view.html```:
 
 Fetch clicked item by listening to ```$ionTreeList:ItemClicked``` in your controller:
 
+## Emmited events
+
 ```
 $scope.$on('$ionTreeList:ItemClicked', function(event, item) {
   // process 'item'
   console.log(item);
+});
+
+$scope.$on('$ionTreeList:LoadComplete', function(event, items) {
+  // process 'items'
+  console.log(items);
 });
 ```
 

@@ -51,16 +51,16 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             
             $scope.moveItem = function(item, fromIndex, toIndex) {
                 $scope.items.splice(fromIndex, 1);
-                $scope.items.splice(toIndex, 0, item);
+                $scope.items.splice(toIndex, 0, item)
             };
             
             $scope.$watch('collapsed', function(){
-                $scope.toggleCollapse($scope.items);
+                $scope.toggleCollapse($scope.items)
             });
 
             $scope.$watch('items', function(){
                 $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
-                $scope.$emit('$ionTreeList:LoadComplete', $scope.items);
+                $scope.$emit('$ionTreeList:LoadComplete', $scope.items)
             })
         }
     }

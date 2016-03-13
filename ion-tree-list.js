@@ -4,7 +4,7 @@
 var CONF = {
     baseUrl: 'lib/ion-tree-list',
     digestTtl: 35
-};
+}
 
 function addDepthToTree(obj, depth, collapsed) {
     for (var key in obj) {
@@ -30,7 +30,7 @@ function toggleCollapse(obj) {
 angular.module('ion-tree-list', [], function($rootScopeProvider){
     $rootScopeProvider.digestTtl(CONF.digestTtl)
 })
-.directive('ionTreeList', function () {
+.directive('ionTreeList', function() {
     return {
         restrict: 'E',
         scope: {
@@ -40,7 +40,7 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             showReorder: '='
         },
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
-        controller: function($scope){
+        controller: function($scope) {
             $scope.baseUrl = CONF.baseUrl;
             $scope.toggleCollapse = toggleCollapse;
             $scope.templateUrl = $scope.templateUrl ? $scope.templateUrl : 'item_default_renderer';
@@ -52,13 +52,13 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             $scope.moveItem = function(item, fromIndex, toIndex) {
                 $scope.items.splice(fromIndex, 1);
                 $scope.items.splice(toIndex, 0, item)
-            };
+            }
             
-            $scope.$watch('collapsed', function(){
+            $scope.$watch('collapsed', function() {
                 $scope.toggleCollapse($scope.items)
             });
 
-            $scope.$watch('items', function(){
+            $scope.$watch('items', function() {
                 $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
                 $scope.$emit('$ionTreeList:LoadComplete', $scope.items)
             })

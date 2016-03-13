@@ -52,6 +52,15 @@ In your ```view.html```:
 <ion-tree-list items="tasks" collapsed="true"></ion-tree-list>
 ```
 
+Fetch clicked item that in your controller by listening to ```$ionTreeList:ItemClicked```:
+
+```
+$scope.$on('$ionTreeList:ItemClicked', function(event, item) {
+  // process 'item'
+  console.log(item);
+});
+```
+
 ## Custom templates
 
 Imagine your tasks in ```$scope.tasks``` in your ```controller.js``` has an extra attribute as ```checked```:

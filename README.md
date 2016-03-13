@@ -52,7 +52,7 @@ In your ```view.html```:
 <ion-tree-list items="tasks" collapsed="true"></ion-tree-list>
 ```
 
-Fetch clicked item that in your controller by listening to ```$ionTreeList:ItemClicked```:
+Fetch clicked item by listening to ```$ionTreeList:ItemClicked``` in your controller:
 
 ```
 $scope.$on('$ionTreeList:ItemClicked', function(event, item) {

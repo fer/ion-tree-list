@@ -1,6 +1,6 @@
 {
   "name": "ion-tree-list",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Ionic directive for displaying nested list items.",
   "main": "ion-tree-list.js",
   "scripts": {
@@ -29,6 +29,7 @@
     "gulp-less": "^3.0.3",
     "gulp-load-plugins": "^1.0.0-rc.1",
     "gulp-minify-css": "^1.2.0",
+    "gulp-release-tasks": "0.0.3",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.3",
     "karma-html2js-preprocessor": "^0.1.0",

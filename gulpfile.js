@@ -1,6 +1,7 @@
 'use strict';
 
 var gulp = require('gulp'),
+    release = require('gulp-release-tasks')(gulp),
     $ = require('gulp-load-plugins')(),
     Server = require('karma').Server;
 
@@ -25,9 +26,7 @@ gulp.task('updateNpmDependencies', function(){
 });
 
 gulp.task('copy', function() {
-    gulp.src(['ion-tree-list.js'])
-        .pipe(gulp.dest('gh-pages/ion-tree-list/lib/ion-tree-list/'))
-    gulp.src(['ion-tree-list.css'])
+    return gulp.src(['ion-tree-list.js', 'ion-tree-list.css', 'ion-tree-list-tmpl.html'])
         .pipe(gulp.dest('gh-pages/ion-tree-list/lib/ion-tree-list/'));
 });
 

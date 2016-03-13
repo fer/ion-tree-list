@@ -1,4 +1,5 @@
 "use strict";
+/* global angular */
 
 var CONF = {
     baseUrl: 'lib/ion-tree-list',

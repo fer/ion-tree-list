@@ -24,6 +24,14 @@ gulp.task('updateNpmDependencies', function(){
         .pipe(gulp.dest('.'))
 });
 
+gulp.task('copy', function() {
+    gulp.src(['ion-tree-list.js'])
+        .pipe(gulp.dest('gh-pages/ion-tree-list/lib/ion-tree-list/'))
+    gulp.src(['ion-tree-list.css'])
+        .pipe(gulp.dest('gh-pages/ion-tree-list/lib/ion-tree-list/'));
+});
+
 gulp.task('watch', function(){
     gulp.watch('./*.less', ['less']);
+    gulp.watch('**/*.js', ['copy']);
 });

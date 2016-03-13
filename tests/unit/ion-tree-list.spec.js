@@ -1,5 +1,5 @@
 'use strict';
-
+/* global angular, inject, spyOn, expect */
 
 describe('Directives', function(){
     var templateCache, scope, element, Directive,
@@ -30,15 +30,13 @@ describe('Directives', function(){
                 this.directive[0].templateUrl = templateUrl;  // Override baseUrl for custom templates
                 this.element = $compile(angular.element('<ion-tree-list items="items"></ion-tree-list>'))(scope);
                 this.element.scope().$apply();
-                this.isolateScope = this.element.isolateScope();
+                this.isolateScope = this.element.isolateScope()
             };
 
             scope = $rootScope.$new();
             scope.items = items;
-            spyOn(scope, '$emit');
             scope.$digest();
-            templateCache = $templateCache;
-            
+            templateCache = $templateCache
         }
     ));
 
@@ -59,19 +57,19 @@ describe('Directives', function(){
         });
 
         it('has an isolate scope', function() {
-            expect(d.isolateScope).toBeDefined();
+            expect(d.isolateScope).toBeDefined()
         });
 
         it('has an isolate scope with a "items" property on it', function() {
-            expect(d.isolateScope.items).toBeDefined();
+            expect(d.isolateScope.items).toBeDefined()
         });
 
         it('has a moveItem method', function(){
-            expect(typeof d.isolateScope.moveItem).toBe('function');
+            expect(typeof d.isolateScope.moveItem).toBe('function')
         });
 
         it('items have the same of elements as in scope', function(){
-            expect(d.element[0].querySelectorAll('.item').length).toBe(4);
+            expect(d.element[0].querySelectorAll('.item').length).toBe(4)
         });
 
         it('items has the correct className assigned', function(){
@@ -84,14 +82,16 @@ describe('Directives', function(){
         });
         
         it('has a emitEvent method', function(){
-            expect(typeof d.isolateScope.emitEvent).toBe('function');
+            expect(typeof d.isolateScope.emitEvent).toBe('function')
         });
         
         it('has an emitEvent on item click called $ionTreeList:ItemClicked', function(){
-            var els = d.element.find('ion-item');
-            console.log(els.eq(0));
-            d.isolateScope.emitEvent(d.isolateScope.items[0]);
-            // expect(scope.$emit).toHaveBeenCalledWith('$ionTreeList:ItemClicked');
-        });
+            var item0 = d.isolateScope.items[0];
+            
+            spyOn(d.isolateScope, '$emit');
+            d.isolateScope.emitEvent(item0);
+            expect(d.isolateScope.$emit).toHaveBeenCalled();
+            expect(d.isolateScope.$emit).toHaveBeenCalledWith('$ionTreeList:ItemClicked', item0)
+        })
     })
 });

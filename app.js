@@ -41,7 +41,7 @@ function generateSampleNodes(obj, num) {
 function calculateTotalNodes(obj) { 
    var count = 0;
    
-   obj.forEach(function(model, key) { 
+   angular.forEach(obj, function(model, key) { 
        if(model.hasOwnProperty('tree')) { 
            count = count + calculateTotalNodes(model.tree) + 1
        } else {
@@ -54,10 +54,13 @@ function calculateTotalNodes(obj) {
 
 angular.module('starter', ['ionic', 'ionic-toast', 'ion-tree-list'])
     .controller('DashCtrl', function($scope, ionicToast) {
-        $scope.collapse = true;
-        $scope.tasks = generateSampleNodes([], 10);
-        $scope.customTemplate = 'item_default_renderer';
-        $scope.totalNodes = calculateTotalNodes($scope.tasks);
+        angular.extend($scope, {
+            collapse: true,
+            tasks: generateSampleNodes([], 10),
+            customTemplate: 'item_default_renderer',
+            totalNodes: calculateTotalNodes($scope.tasks)
+        });
+        
         
         $scope.generateSampleNodes = function(num) {
             $scope.tasks = $scope.tasks.concat(generateSampleNodes($scope.tasks, num))

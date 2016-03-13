@@ -38,7 +38,6 @@ function generateSampleNodes(obj, num) {
     return result
 }
 
-
 function calculateTotalNodes(obj) { 
    var count = 0;
    
@@ -61,7 +60,7 @@ angular.module('starter', ['ionic', 'ionic-toast', 'ion-tree-list'])
         $scope.totalNodes = calculateTotalNodes($scope.tasks);
         
         $scope.generateSampleNodes = function(num) {
-            $scope.tasks = $scope.tasks.concat(generateSampleNodes($scope.tasks, num));
+            $scope.tasks = $scope.tasks.concat(generateSampleNodes($scope.tasks, num))
         }
         
         $scope.toggleTemplate = function() {
@@ -73,6 +72,7 @@ angular.module('starter', ['ionic', 'ionic-toast', 'ion-tree-list'])
         });
         
         $scope.$on('$ionTreeList:ItemClicked', function(event, item) {
+            item.checked = !item.checked;
             ionicToast.show('You clicked: ' + JSON.stringify(item.name), 'bottom', false, 1500)
         })
     })

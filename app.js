@@ -91,7 +91,7 @@ angular.module('starter', ['ionic', 'ionic-toast', 'ion-tree-list'])
         ];
 
         $scope.$on('$ionTreeList:ItemClicked', function(event, item) {
-            ionicToast.show('You clicked: ' + JSON.stringify(item.name), 'bottom', true, 2500)
+            ionicToast.show('You clicked: ' + JSON.stringify(item.name), 'bottom', false, 2500)
         });
 
         $scope.toggleCollapse = function(){

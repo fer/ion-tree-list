@@ -1,7 +1,7 @@
 {
   "name": "ion-tree-list",
   "main": "ion-tree-list.js",
-  "version": "0.0.3",
+  "version": "0.0.7",
   "homepage": "https://github.com/fer/ion-tree-list",
   "authors": [
     "fer <fer@ferqwerty.com>"

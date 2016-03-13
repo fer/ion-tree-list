@@ -38,6 +38,7 @@ function generateSampleNodes(obj, num) {
     return result
 }
 
+
 function calculateTotalNodes(obj) { 
    var count = 0;
    

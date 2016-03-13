@@ -1,5 +1,6 @@
 *.css.map
-.bower_components
+bower_components/*
 .DS_Store
 .idea
 .node_modules
+gh-pages/*

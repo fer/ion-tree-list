@@ -36,13 +36,14 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         scope: {
             items: '=',
             collapsed: '=',
+            collapsible: '=',
             templateUrl: '@',
             showReorder: '='
         },
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope){
             $scope.baseUrl = CONF.baseUrl;
-            $scope.toggleCollapse = toggleCollapse;
+            $scope.toggleCollapse = ($scope.collapsible === false) ? function(){} : toggleCollapse;
             $scope.templateUrl = $scope.templateUrl ? $scope.templateUrl : 'item_default_renderer';
             
             $scope.emitEvent = function(item){

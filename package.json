@@ -1,6 +1,6 @@
 {
   "name": "ion-tree-list",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Ionic directive for displaying nested list items.",
   "main": "ion-tree-list.js",
   "scripts": {

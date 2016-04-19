@@ -42,7 +42,12 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope) {
             $scope.baseUrl = CONF.baseUrl;
-            $scope.toggleCollapse = toggleCollapse;
+
+            $scope.toggleCollapse = function(item) {
+                if (item && item.collapsible !== false) {
+                    toggleCollapse(item);
+                }
+            };
             
             $scope.emitEvent = function(item){
                 $scope.$emit('$ionTreeList:ItemClicked', item)

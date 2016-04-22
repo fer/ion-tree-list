@@ -6,12 +6,12 @@ var CONF = {
     digestTtl: 35
 }
 
-function addDepthToTree(obj, depth, collapsed) {
+function addDepthToTree(obj, depth, collapsed, treeKey) {
     for (var key in obj) {
         if ( obj[key] && typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
             obj[key].collapsed = collapsed;
-            addDepthToTree(obj[key], key === 'tree' ? ++ depth : depth, collapsed)
+            addDepthToTree(obj[key], key === treeKey ? ++ depth : depth, collapsed)
         }
     }
     return obj
@@ -35,6 +35,8 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         restrict: 'E',
         scope: {
             items: '=',
+            itemsTreeKey: '=',
+            itemsNameKey: '=',
             collapsed: '=',
             templateUrl: '@',
             showReorder: '='
@@ -42,28 +44,30 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
         controller: function($scope) {
             $scope.baseUrl = CONF.baseUrl;
+            $scope.itemsTreeKey = $scope.itemsTreeKey ? $scope.itemsTreeKey : 'tree';
+            $scope.itemsNameKey = $scope.itemsNameKey ? $scope.itemsNameKey : 'name';
 
             $scope.toggleCollapse = function(item) {
                 if (item && item.collapsible !== false) {
                     toggleCollapse(item);
                 }
             };
-            
+
             $scope.emitEvent = function(item){
                 $scope.$emit('$ionTreeList:ItemClicked', item)
             }
-            
+
             $scope.moveItem = function(item, fromIndex, toIndex) {
                 $scope.items.splice(fromIndex, 1);
                 $scope.items.splice(toIndex, 0, item)
             }
-            
+
             $scope.$watch('collapsed', function() {
                 $scope.toggleCollapse($scope.items)
             });
 
             $scope.$watch('items', function() {
-                $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
+                $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed, $scope.itemsTreeKey);
                 $scope.$emit('$ionTreeList:LoadComplete', $scope.items)
             })
         },

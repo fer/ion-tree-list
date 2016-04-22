@@ -11,7 +11,7 @@ function addDepthToTree(obj, depth, collapsed, treeKey) {
         if ( obj[key] && typeof(obj[key]) == 'object') {
             obj[key].depth = depth;
             obj[key].collapsed = collapsed;
-            addDepthToTree(obj[key], key === treeKey ? ++ depth : depth, collapsed)
+            addDepthToTree(obj[key], key === treeKey ? ++ depth : depth, collapsed, treeKey)
         }
     }
     return obj
@@ -35,7 +35,7 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
         restrict: 'E',
         scope: {
             items: '=',
-            itemsTreeKey: '=',
+            itemsTreeKey: '@',
             itemsNameKey: '=',
             collapsed: '=',
             templateUrl: '@',

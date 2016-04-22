@@ -20,9 +20,9 @@ You'll need to add ```ion-tree-list``` as a dependency on your Ionic app:
 
 ```
 angular.module('starter', [
-    'ionic', 
-    'controllers', 
-    'services', 
+    'ionic',
+    'controllers',
+    'services',
     'ion-tree-list'
 ])
 ```
@@ -91,7 +91,7 @@ Imagine your tasks in ```$scope.tasks``` in your ```controller.js``` has an extr
   ];
 ```
 
-In order to consume the ```checked``` value in your view, create a ```ion-item.tmpl.html``` file in 
+In order to consume the ```checked``` value in your view, create a ```ion-item.tmpl.html``` file in
 your www folder containing the following:
 
 ```
@@ -100,14 +100,40 @@ your www folder containing the following:
 ```
 
 Add an extra ```template-url``` attribute for your custom template:
- 
+
 ```
 <ion-tree-list items="tasks" template-url="'ion-item.tmpl.html'"></ion-tree-list>
 ```
 
+## Custom object keys attributes
+
+Imagine your tasks in ```$scope.tasks``` in your ```controller.js``` has custom named attributes instead of ```'name'``` and/or ```'tree'``` :
+
+```
+  $scope.task = [
+    {
+      title: 'first task 1',
+      childrens: [
+        {
+          title: 'first task 1.1'
+        },
+      ]
+    },
+    {
+      title: 'first task 2',
+    }
+  ];
+```
+
+You can specify those custom keys using the```items-name-key``` and ```items-tree-key``` directive attribute:
+
+```
+<ion-tree-list items="tasks" items-name-key="title" items-tree-key="childrens"></ion-tree-list>
+```
+
 ## Contributing
 
-Developers interested in contributing are very welcomed. 
+Developers interested in contributing are very welcomed.
 
 There's an existent list of issues right [here](https://github.com/fer/ion-tree-list/issues).
 

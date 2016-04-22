@@ -105,7 +105,7 @@ Add an extra ```template-url``` attribute for your custom template:
 <ion-tree-list items="tasks" template-url="'ion-item.tmpl.html'"></ion-tree-list>
 ```
 
-## Custom object keys attributes
+## Custom object keys
 
 Imagine your tasks in ```$scope.tasks``` in your ```controller.js``` has custom named attributes instead of ```'name'``` and/or ```'tree'``` :
 

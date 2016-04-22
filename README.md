@@ -125,7 +125,7 @@ Imagine your tasks in ```$scope.tasks``` in your ```controller.js``` has custom 
   ];
 ```
 
-You can specify those custom keys using the```items-name-key``` and ```items-tree-key``` directive attribute:
+You can specify those custom keys using the```items-name-key``` and ```items-tree-key``` directive attributes :
 
 ```
 <ion-tree-list items="tasks" items-name-key="title" items-tree-key="childrens"></ion-tree-list>

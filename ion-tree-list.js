@@ -53,7 +53,8 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
                 }
             };
 
-            $scope.emitEvent = function(item){
+            $scope.emitEvent = function(event,item){
+                event.stopPropagation();
                 $scope.$emit('$ionTreeList:ItemClicked', item)
             }
 

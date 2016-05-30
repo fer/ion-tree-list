@@ -51,12 +51,12 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             
             $scope.emitEvent = function(item){
                 $scope.$emit('$ionTreeList:ItemClicked', item)
-            }
+            };
             
             $scope.moveItem = function(item, fromIndex, toIndex) {
                 $scope.items.splice(fromIndex, 1);
                 $scope.items.splice(toIndex, 0, item)
-            }
+            };
             
             $scope.$watch('collapsed', function() {
                 $scope.toggleCollapse($scope.items)

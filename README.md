@@ -107,8 +107,8 @@ Add an extra ```template-url``` attribute for your custom template:
 
 ## Contributing
 
-Developers interested in contributing are very welcomed. 
+Developers interested in contributing are very welcomed :)
 
-Don't hesitate to ping me on my [email](mailto:fer@ferqwerty.com) if you are missing feature and you want to contribute.
+Don't hesitate to ping me on my [email](mailto:fer@ferqwerty.com) if you are missing a feature, a fix or you simply want to contribute.
 
 There's an existent list of issues right [here](https://github.com/fer/ion-tree-list/issues).

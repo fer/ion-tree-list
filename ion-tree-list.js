@@ -27,10 +27,10 @@ function toggleCollapse(obj) {
     return obj
 }
 
-angular.module('ion-tree-list', [], function($rootScopeProvider){
+angular.module('ion-tree-list', [], ['$rootScopeProvider', function($rootScopeProvider){
     $rootScopeProvider.digestTtl(CONF.digestTtl)
-})
-.directive('ionTreeList', function() {
+}])
+.directive('ionTreeList', [function() {
     return {
         restrict: 'E',
         scope: {
@@ -40,7 +40,7 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
             showReorder: '='
         },
         templateUrl: CONF.baseUrl + '/ion-tree-list.tmpl.html',
-        controller: function($scope) {
+        controller: ['$scope', function($scope) {
             $scope.baseUrl = CONF.baseUrl;
 
             $scope.toggleCollapse = function(item) {
@@ -66,9 +66,9 @@ angular.module('ion-tree-list', [], function($rootScopeProvider){
                 $scope.items = addDepthToTree($scope.items, 1, $scope.collapsed);
                 $scope.$emit('$ionTreeList:LoadComplete', $scope.items)
             })
-        },
+        }],
         compile: function(element, attrs){
             attrs.templateUrl = attrs.templateUrl ? attrs.templateUrl : 'item_default_renderer';
         }
     }
-});
+}]);

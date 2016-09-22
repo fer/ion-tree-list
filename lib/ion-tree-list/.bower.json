@@ -28,11 +28,11 @@
     "ionic": "~1.0.1",
     "angular-mocks": "1.3.13"
   },
-  "_release": "909e89e5a2",
+  "_release": "bdd38c131c",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "909e89e5a2a7046b438bdc7ad67c53cd27c9523c"
+    "commit": "bdd38c131ceb7dd3fac4edcb2911053168b10bc7"
   },
   "_source": "https://github.com/fer/ion-tree-list.git",
   "_target": "master",

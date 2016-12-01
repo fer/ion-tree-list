@@ -18,12 +18,12 @@
     "list"
   ],
   "author": "fer <fer@ferqwerty.com>",
-   "contributors": [
+  "contributors": [
      {
       "name": "Salva Vilarrasa",
       "email": "shagy69@gmail.com"
      }
-   ],
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fer/ion-tree-list/issues"

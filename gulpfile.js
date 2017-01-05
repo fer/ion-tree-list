@@ -16,7 +16,19 @@ gulp.task('less', function () {
     return gulp.src('./*.less')
         .pipe($.less())
         .pipe($.minifyCss())
+        .pipe($.rename({suffix: '.min'}))
         .pipe(gulp.dest('.'));
+});
+
+gulp.task('compress', function() {
+    return gulp.src('ion-tree-list.js')
+        .pipe($.minify(
+            {
+                ext: {
+                    min: '.min.js'
+                }
+            }))
+        .pipe(gulp.dest('.'))
 });
 
 gulp.task('updateNpmDependencies', function(){

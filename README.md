@@ -16,6 +16,8 @@ Add somewhere in your HEAD tag:
 <script src="lib/ion-tree-list/ion-tree-list.js"></script>
 ```
 
+Or fetch it from the [cdnjs](https://cdnjs.com/about) project : [https://cdnjs.com/libraries/ion-tree-list](https://cdnjs.com/libraries/ion-tree-list).
+
 You'll need to add ```ion-tree-list``` as a dependency on your Ionic app:
 
 ```

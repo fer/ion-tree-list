@@ -2,5 +2,5 @@
 bower_components/*
 .DS_Store
 .idea
-.node_modules
+/node_modules
 gh-pages/*

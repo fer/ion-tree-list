@@ -4,7 +4,7 @@
     <span class="symbol">
         <i class="icon" ng-if="item.tree.length > 0" ng-class="item.tree.collapsed ? 'ion-arrow-down-b' : 'ion-arrow-right-b'"></i>
     </span>
-    {{item.name}} - {{item.depth}}
+    {{item.name}}
     <ion-reorder-button class="ion-navicon" on-reorder="moveItem(item, $fromIndex, $toIndex)"></ion-reorder-button>
 </script>
 

@@ -5,7 +5,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title>ion-tree-list example</title>
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script src="lib/ion-tree-list/ion-tree-list.min.js"></script>
+    <script src="lib/ion-tree-list/ion-tree-list.js"></script>
     <script src="lib/ionic-toast/dist/ionic-toast.bundle.min.js"></script>
     <script src="app.js"></script>
     <link rel="stylesheet" href="lib/ionic/css/ionic.min.css"/>
@@ -18,7 +18,7 @@
       </a>
     </ion-header-bar>
     <ion-content>
-      <ion-tree-list items="tasks" collapsed="collapse" template-url="{{customTemplate}}"></ion-tree-list>
+      <ion-tree-list items="tasks" collapsed="collapse" collapsed-level="2" template-url="{{customTemplate}}"></ion-tree-list>
     </ion-content>
     <ion-footer-bar align-title="left">
       <div class="tabs">

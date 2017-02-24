@@ -15,7 +15,7 @@
     </ion-item>
     <ion-list ng-model="item.tree"
               ng-repeat="item in item.tree"
-              ng-hide="item.collapsed"
+              ng-if="!item.collapsed"
               ng-include="'items_renderer'"
               show-reorder="showReorder">
     </ion-list>

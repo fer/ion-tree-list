@@ -1,4 +1,4 @@
-# ion-tree-list [![Stories in Ready](https://badge.waffle.io/fer/ion-tree-list.png?label=ready&title=Ready)](https://waffle.io/fer/ion-tree-list)  [![devDependency Status](https://david-dm.org/fer/ion-tree-list/dev-status.svg?style=flat)](https://david-dm.org/fer/ion-tree-list#info=devDependencies) [![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list) [![Build Status](https://drone.io/github.com/fer/ion-tree-list/status.png)](https://drone.io/github.com/fer/ion-tree-list/latest)
+# ion-tree-list [![Stories in Ready](https://badge.waffle.io/fer/ion-tree-list.png?label=ready&title=Ready)](https://waffle.io/fer/ion-tree-list)  [![devDependency Status](https://david-dm.org/fer/ion-tree-list/dev-status.svg?style=flat)](https://david-dm.org/fer/ion-tree-list#info=devDependencies) [![Bower version](https://badge.fury.io/bo/ion-tree-list.svg)](http://badge.fury.io/bo/ion-tree-list)
 
 Ionic directive for displaying nested list ionic items.
 

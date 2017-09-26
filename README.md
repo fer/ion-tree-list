@@ -4,6 +4,8 @@ Ionic directive for displaying nested list ionic items.
 
 Check [demo](http://fer.github.io/ion-tree-list/) link.
 
+#### I am actively looking for contributors who can port this library to [Ionic 2](http://ionic.io/2). If you are interested in doing so, don't hesitate to [drop me an email](mailto:fer+github@ferqwerty.com).
+
 ## Installation
 
 ```

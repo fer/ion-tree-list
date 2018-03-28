@@ -116,4 +116,4 @@ Developers interested in contributing are very welcomed :)
 
 Don't hesitate to ping me on my [email](mailto:fer@ferqwerty.com) if you are missing a feature, a fix or you simply want to contribute.
 
-There's an existent list of issues right [here](https://github.com/fer/ion-tree-list/issues).
+There's a list of issues right [here](https://github.com/fer/ion-tree-list/issues).

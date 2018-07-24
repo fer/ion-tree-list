@@ -1,0 +1,10 @@
+- [ ] collapsedLevel .. test + document… igual usar el json tree para todo
+- [ ] https://github.com/awendland/angular-json-tree
+- [ ] https://github.com/krispo/json-tree
+- [ ] ionic 2
+- [ ] sacar el CSS fuera del template? para que lo pille del CDN
+- [ ] I just created a function that only opened the next depth of the tree. Thank for checking in!
+- [ ] https://github.com/vivlong/ion-tree-list/commit/8cbeebb8f276db6b29314e392399c02ff8ce5538
+- [ ] https://github.com/tjgao/ion-tree-list/commit/597a43a2ee31e7453f7fd7cb7d19f5a065931706
+- [ ] ion-tree-list - rememberable states!
+- [ ] meter CDNJS algun link en el readme

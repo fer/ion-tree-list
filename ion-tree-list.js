@@ -18,10 +18,10 @@ function addDepthToTree(obj, depth, collapsed) {
 }
 
 function toggleCollapse(obj) {
-    for (var key in obj) {
-        if (obj[key] && typeof(obj[key]) == 'object') {
-            obj[key].collapsed = !obj[key].collapsed;
-            toggleCollapse(obj[key])
+    if (obj.tree) {
+        obj.tree.collapsed = !obj.tree.collapsed;
+        for (var i = 0; i < obj.tree.length; i++) {
+            obj.tree[i].collapsed = !obj.tree[i].collapsed;
         }
     }
     return obj

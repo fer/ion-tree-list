@@ -1,5 +1,5 @@
 {
-  "name": "ion-tree-list",
+  "name": "@fer/ion-tree-list",
   "version": "0.0.11",
   "description": "Ionic directive for displaying nested list items.",
   "main": "ion-tree-list.js",
